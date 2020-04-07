@@ -52,6 +52,12 @@ Finally, apply the new config file:
 ```
 sudo update-initramfs -u
 ```
+or on Fedora:
+```
+dracut -f /boot/initramfs-currentimage
+```
+Where *initramfs-currentimage* is replaced with the name of the image you are currently using.
+
 To (re-)load the module for immediate use, run
 ```
 sudo modprobe -r hid_apple; sudo modprobe hid_apple
